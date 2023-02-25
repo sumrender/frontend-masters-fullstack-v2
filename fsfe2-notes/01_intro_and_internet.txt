@@ -1,0 +1,66 @@
+shells: interface with os
+
+terminals: wrappers around shells
+
+// see your terminal name
+$ echo $0
+
+internet:
+  computers connected together globally
+
+intranet:
+  private internet (vpn)
+
+ip:
+  internet protocol, how computers talk to each other
+
+ip address:
+  label assigned to an internet connected device
+
+ipv4, ipv6,
+
+TCP: lossless, SYN and ACK
+UDP: shouts hey, and doesn't cares if heard or not.
+
+I have a UDP joke, but you might not get it.
+
+ping: hey hey hey, you there
+$ ping google.com
+short way to see, if your site is working
+
+DNS: Domain Name System
+handled by ICANN
+
+
+blog.sammy.com
+
+blog: subdomain, telling that you are on diff part
+      of the site
+
+com, edu, io: top level domains
+
+sammy.com => domain
+
+blog.sammy.com =>
+  it's like its a part of sammy.com but a diff.
+  application entirely
+
+===============Trace Route==================
+$ man traceroute
+
+$ traceroute google.com
+
+ping and traceroute use ICMP,
+Internet Control Message Protocol
+
+
+Packets
+sent using TCP, error resolves as client knows
+  which packets are missing
+sent using UDP, just broadcasting, eventually
+  lost Packets are resolved
+
+
+============== Net Neutrality ===================
+should ISP provide same speed to everyone,
+or more to those who pay

@@ -1,0 +1,7 @@
+1. Create git repository
+2. Create SSH key
+  $ cd ~/.ssh/
+  $ ssh-keygen
+3. Add SSH key to github
+4. Add remote repo
+5. push local repository to github

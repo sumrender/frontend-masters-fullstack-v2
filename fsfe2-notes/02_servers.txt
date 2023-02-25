@@ -1,0 +1,77 @@
+VIM
+  available on all servers
+  has 3 modes,
+    insert mode     => i
+    command mode    => ESC
+    last line mode  => :
+
+  Quit VIM
+  esc :q!
+
+create and save a file
+$ vim file_name
+
+get in insert mode
+type what you want
+go to last line mode, and do 
+:wq // to save the file
+
+to view, do $ cat file_name
+or $ less file_name
+
+
+CREATING A SERVER 
+  create a simple http server in node
+--------------------------------------------
+const http = require("http");
+
+http.createServer((req, res)=>{
+        res.write("hello world!");
+        res.end();
+}).listen(8080);
+
+console.log("Server listening on port 8080")
+---------------------------------------------
+
+// to get line numbers in vim
+// in last line mode type
+: set number
+
+// to remove number, do
+: set nonumber
+
+// run the server, and it should be working
+// properly, using node simpleServer.js
+
+elastic computing: 
+  scale up or down computing power(Servers)
+  as per need
+
+Virtual Private Server:
+  Small piece of server
+
+Droplet(VPS) on DigitalOcean
+using ubuntu LTS
+
+===============================
+playing with my WSL
+=> To open your WSL project in Windows File Explorer, enter:
+$ explorer.exe .
+
+SSH: Secure Socket Shell
+creating .ssh folder, since it does not exists
+
+create ssh key using ssh-keygen
+
+create a virtual machine instance, and add ssh key there
+
+connect in terminal using 
+$ ssh root@IP_of_vm
+$ ssh root@45.79.126.39
+
+you never want to be the root user,
+root user has superpowers that can be used
+irresponsibly,
+
+check user by:
+$ whoami

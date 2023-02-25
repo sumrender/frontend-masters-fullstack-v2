@@ -1,0 +1,17 @@
+========= Process Manager ===========
+keeps your application running
+handles errors and restarts
+can handle running and clustering
+
+
+// install pm2
+$ sudo npm i -g pm2
+
+// start pm2 
+$ pm2 start app.js
+
+// setup auto restart
+$ pm2 startup
+
+// check status 
+$ pm2 status

@@ -1,0 +1,45 @@
+nginx:
+  lightweight server
+  => reverse proxy 
+  => web server 
+  => proxy server
+
+// install nginx
+$ sudo apt install nginx
+
+// start nginx
+$ sudo service nginx start
+
+// now that service is working,
+// if you enter your domain, or your ip or your ip:80,
+// you will go to welcome to nginx page
+
+// http://45.79.126.39
+
+// change ownership of the www directory to the 
+// current user 
+$ sudo chown -R $USER:$USER /var/www
+
+// create app directory
+$ mkdir /var/www/app
+
+// move into app dir and do git init
+$ cd /var/www/app && git init
+
+// create directories
+$ mkdir -p ui/js ui/html ui/css
+$ touch app.js
+$ npm init
+$ npm i express
+
+// create simple express app and run it on port 3000
+// it should be working on sumrender.rocks:3000
+
+// Exercise Proxy Pass
+$  sudo vi /etc/nginx/sites-available/default
+// in the file made changes
+location / {
+  proxy_pass http://127.0.0.1:3000/;
+}
+
+

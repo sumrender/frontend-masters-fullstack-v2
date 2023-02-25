@@ -1,0 +1,61 @@
+DNS Records:
+  Maps name to IP address => A record
+  Maps name to name => C name
+
+
+$ dig jemyoung.com
+$ dig blog.jemyoung.com
+
+// created domain on name.com 
+// added domain to linode.com, linode domains tab
+
+// SERVER SETUP
+1. Update software
+2. Create a new user
+3. Make that user a super user
+4. Enable login for new user
+5. disable root login
+
+// =================
+$ apt update // to update
+$ apt upgrade // to upgrade
+$ adduser $USERNAME
+
+// give sudo privileges to user
+$ usermod -aG sudo yzal
+
+// switch user 
+$ su yzal // (your_username)
+
+// check sudo access
+$ sudo cat /var/log/auth.log
+
+// running the last command with sudo 
+$ sudo !!
+
+// see first 10 files
+$ head filename
+
+// see last lines of the file
+$ tail filenam
+
+// see realtime changes to file
+$ tail -f filename
+
+// change to home directory
+$ cd ~
+
+// create new directory if it doesn't exist
+$ mkdir -p ~/.ssh
+
+// create authorized_keys file and paste PUBLIC key
+$ vi ~/.ssh/authorized_keys
+
+// change authorized_keys file permissions
+$ chmod 644 ~/.ssh/authorized_keys
+
+// disable root login
+$ sudo vi /etc/ssh/sshd_config
+
+// restart ssh daemon
+$ sudo service sshd restart
