@@ -42,4 +42,12 @@ location / {
   proxy_pass http://127.0.0.1:3000/;
 }
 
+// set server domain in nginx
+$ sudo vi /etc/nginx/sites-available/default
+// in the file make changes
+server_name sumrender.rocks www.sumrender.rocks;
+
+// go to certbot and follow instructions
+// after instructions, site may not run on https
+// since https is disabled from ufw
 

@@ -1,0 +1,69 @@
+Read auth.log
+$ sudo cat /var/log/auth.log
+
+Application Updates
+  Install unattended upgrades
+  $ sudo apt install unattended-upgrades
+
+  View conf file
+  $ cat /etc/apt/apt.conf.d/50unattended-upgrades
+
+Firewalls
+  A network security device that monitors
+  incoming and outgoing network traffic and
+  decides whether to allow or block specific
+  traffic based on a defined set of security
+  rules.
+
+nmap: port and ip scanner
+
+  install nmap
+  $ sudo apt install nmap
+  $ man nmap
+
+  run nmap
+  $ nmap YOUR_SERVER_IP_ADDRESS
+
+  run nmap with more service/version info
+  $ nmap -sV YOUR_SERVER_IP_ADDRESS
+
+PORT
+  communication endpoint that maps
+  to a specific process or network service
+
+  see ports
+  $ less /etc/services
+
+ufw: uncomplicated firewall
+  
+              ssh
+              http
+  $ ufw allow https
+        deny  
+        reject
+
+  Check firewall status
+  $ sudo ufw status
+
+  Enable ssh
+  $ sudo ufw allow ssh
+
+  Enable firewall 
+  $ sudo ufw enable
+
+  IMP: Be careful, you can close ssh,
+      then you won't have any way of accessing
+      the server 
+
+
+Permissions:
+  read, write or execute
+  777 => anybody can read or write
+  775 => owner and group can rwx.
+         everyone else can read, execute
+  774 => owner and grp can rwx.
+         everyone else can read
+  755 => owner can rwx.
+         everyone else can read, execute.
+
+Upgrading node

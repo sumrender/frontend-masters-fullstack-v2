@@ -1,0 +1,30 @@
+Nginx redirect
+
+  location /help {
+    return 301 https://developer.mozilla.org/en-US
+  }
+
+  Permanent redirects(301) vs Temp redirects(302)
+  
+Nginx subdomain
+
+  server {
+    listen 80;
+    listen [::]80; # IPV6 notation
+
+    server_name test.sumrender.rocks;
+
+    location / {
+      proxy_pass http://localhost:3000;
+    }
+  }
+
+Nginx - Gzip
+  /etc/nginx/nginx.conf
+  # settings/config is there
+
+  compression should be around 4 to 6 only
+  nginx compresses by default
+  wav to mp3, compression
+  compression => duplication
+  img are already compressed

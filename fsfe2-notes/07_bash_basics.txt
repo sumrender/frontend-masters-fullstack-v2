@@ -1,0 +1,51 @@
+Bash Basics
+  Standard Streams
+  Redirection
+  Finding things
+  Nginx
+
+Standard Streams 
+  |   => read from stdout
+  >   => write stdout to file
+  >>  => append stdout to file
+  <   => read from stdin
+  2>  => read from stderr
+
+ex: 
+  $ ps | grep bash
+
+find: search file names
+grep: search file contents
+
+ex: 
+  $ find /bar -name foo.txt
+
+  useful options:
+    -name
+    -type
+    -empty
+    -executable
+    -writable
+
+Find all logs in /var/log
+$ find /var/log/nginx -type f -name "*.log"
+
+Find all directories with the name log
+$ find / -type d -name log
+
+
+Run prev command with sudo
+$ sudo !!
+
+
+Searching File Contents with grep and zgrep
+
+  Finding Things
+  $ grep -i 'jem' /var/www
+
+  Search inside gzip file
+  $ zgrep FILE  
+
+
+  Find running node or any other process
+  $ ps aux | grep node

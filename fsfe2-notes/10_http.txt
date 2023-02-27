@@ -1,0 +1,59 @@
+http: hypertext transfer module
+
+A packet wraps HTTP data and then we decode that
+
+The model for http is request and response.
+
+headers: similar to address on the envelope
+
+Status:
+  1xx: information
+  2xx: success
+  3xx: redirect
+  4xx: client error
+  5xx: server error
+
+create a route which returns code 418,
+with a custom header 
+  inside express route do=>
+    res.set('X-full-stack', 'yeaaahh');
+    res.status(418).send("I prefer coffee");
+
+Certbot:
+  automatically enable https on your website
+  certbot.eff.org
+
+// set server domain in nginx
+$ sudo vi /etc/nginx/sites-available/default
+// in the file make changes
+server_name sumrender.rocks www.sumrender.rocks;
+
+// go to certbot and follow instructions
+// after instructions, site may not run on https
+// since https is disabled from ufw
+
+HTTP
+  all data vulnerable
+
+HTTPS
+  ssl, data secured 
+  new handshake for each resource
+
+HTTP/2
+  multiplexing,
+  send resources over single connection, still there is a limit
+
+  to add http/2 just edit nginx config
+  $ sudo vi /etc/nginx/sites-available/default
+  // make changes
+  listen 443 http2 ssl;
+
+  // reload nginx
+  $ sudo service nginx reload
+
+HPACK algorithm
+  generates a hash for headers, and just compares the hash, effectively speeding
+  requests by around 30-40% ??
+
+HTTP/3
+  QUIC: Quick UDP Internet Connections

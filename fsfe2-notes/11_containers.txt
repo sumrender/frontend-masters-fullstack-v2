@@ -1,0 +1,51 @@
+Monolith vs Microservices
+
+Containers are even more watered down version
+of VMs
+
+Containerization: generally Docker
+Orchestration: generally Kubernetes
+
+Load Balancers:
+  Scheduling algorithms:
+    Round Robin
+    IP hashing
+    Random Choice
+    Least connections
+    Least load
+
+
+Display Running Processes
+$ top
+
+// CAN INSTALL HTOP FOR BETTER UI
+install htop
+$ sudo apt install htop 
+
+display running processes 
+$ htop
+
+NGINX as a load balancer
+If we have 2 or more servers, we can add
+use nginx as a load balancer, just google
+it bruh, no need to write the code here
+
+
+STICKY SESSIONS:
+  probles of authorization
+
+
+Deployments
+  set up n number of servers in one go,
+  instead of just manually doing it with 
+  ssh key on your own, that'd be dumb
+
+  tools like ansible, vagrant, puppet are used.
+
+
+Why databases and not files to save data?
+  Now you know the answer.
+
+Websockets
+  persistent bidirectional connection
+  between client and server
